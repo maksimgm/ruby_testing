@@ -1,0 +1,28 @@
+describe "Starting..." do
+  describe "Test Two" do
+    hash = {name:"Maksim", city:"SF"}
+    it "Does something that passes using boolean" do
+      expect(true).to be true
+    end
+
+    it "Does something that fails using boolean" do
+      expect(nil).to be true
+    end
+
+    it "Does something that passes using integer" do
+      expect(40).to eq(40)
+    end
+
+    it "Does something that fails using integer" do
+      expect(40).to equal(50)
+    end
+
+    it "Does something that passes using hashes" do
+      expect(hash).to include(city: "SF")
+    end
+    
+    it "Does something that fails using logical op and integers" do
+      expect(10).to satisfy {|n| n < 7 || n.odd?}
+    end
+  end
+end
